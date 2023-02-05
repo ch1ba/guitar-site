@@ -1,0 +1,457 @@
+/* Первая секция */
+
+*
+    box-sizing: border-box
+    font-family: 'Montserrat',sans-serif
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+    
+
+.section-one
+    position: relative
+    height: 800px
+    background-color: #F0F0F0
+    overflow: hidden
+    &__nav-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__img
+        width: 134px
+        height: 69px
+        padding-top: 10px
+    &__guitar-container
+        position: relative
+        display: flex
+        flex-direction: row
+    &__circle
+        position: absolute
+        right: -100px
+        bottom: -100px
+        
+.hov-line
+    opacity: 0
+    visibility: hidden
+    transition: opacity 1s, visibility 0s linear 0s
+    border: none
+    border-bottom: 1.5px solid black
+
+.nav-menu
+    &__ul
+        display: flex
+        flex-direction: row
+    &__ul-item
+        text-decoration: none
+        font-size: 18px
+        font-family: 'Montserrat',sans-serif
+        color: black
+        margin-right: 64px
+        &:hover
+            color: #f58055
+            .hov-line
+                opacity: 1
+                visibility: visible
+                transition-delay: 0s
+        &:last-child
+            margin-right: 0
+
+
+
+
+.left-wrap
+    position: relative
+    img
+        position: relative
+        z-index: 5
+    &__rect-blue
+        position: absolute
+        z-index: 2
+        top: 140px
+        left: -50px
+        width: 565.95px
+        height: 220px
+        background: #5290EA
+        border-radius: 100px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        transform: rotate(-64deg)
+    &__rect-orange
+        position: absolute
+        z-index: 3
+        top: 150px
+        left: -28px
+        width: 618.43px
+        height: 220px
+        background: #F28B64
+        border-radius: 100px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        transform: rotate(-50.8deg)
+    &__rect-white
+        position: absolute
+        z-index: 1
+        top: 190px
+        left: 23px  
+        width: 608.97px
+        height: 220px
+        background: #E2E2E2
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 100px
+        transform: rotate(-36.15deg)
+
+.right-wrap
+    width: 372px
+    position: absolute
+    top: 85px
+    right: 30px
+    z-index: 6
+    &__icons_container
+        padding-left: 10px
+    &__header
+        margin-bottom: 10px
+    &__line
+        width: 200px
+    &__description
+        padding-top: 7px
+        font-size: 18px
+        font-weight: 400
+        margin-bottom: 20px
+        font-family: 'Montserrat',sans-serif
+    &__circle
+        position: absolute
+        right: -10px
+        top: 100px
+        animation-name: upToBot
+        animation-duration: 2s
+        &:hover
+            background: linear-gradient(143.92deg,rgba(72, 138, 234, 0.5) 14.85%,rgba(237, 123, 80, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+
+.header
+    font-size: 72px
+    font-weight: 600
+    font-family: 'Montserrat', sans-serif
+
+.line
+    margin: 0
+    border: none
+    border-bottom: 1.75px solid black
+
+.icons 
+    &__ico
+        z-index: 100
+        margin-right: 17px
+        border-radius: 50%
+        webkit-transition: -webkit-transform .8s ease-in-out
+        transition: transform .8s ease-in-out
+        &:hover
+            transform: rotate(360deg)
+            webkit-transform: rotate(360deg)
+
+
+.buttons
+    display: inline-flex
+    justify-content: space-between
+    &__to-book
+        margin-right: 32px
+        height: 60px
+        width: 200px
+        border: none
+        border-radius: 100px
+        background: #F28B64
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        color: white
+        font-size: 18px
+        font-weight: 600
+        &:hover
+            cursor: pointer
+            box-shadow: 0 0.5em 0.5em -0.4em red
+            transform: translateY(-0.25em)
+        &:active
+            transform: scale(0.99)
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24)
+    &__container-button
+        display: inline-flex
+        align-items: center
+        img
+            margin-right: 12px
+        p
+            font-size: 18px
+            font-weight: 400
+            font-family: 'Montserrat',sans-serif
+
+
+.circle
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 194px
+    height: 194px
+    background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%,rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+    border-radius: 150px
+    &_big
+        width: 282px
+        height: 282px
+    &__wrapper-in
+        width: 129px
+        height: 129px
+        background: #F0F0F0
+        border-radius: 150px
+        &_big
+            width: 188px
+            height: 188px
+    
+
+
+/* конец первой секции */
+
+
+
+.section-two
+    position: relative
+    background: #FFFFFF
+    &__main-section
+        min-height: 700px
+    &__header
+        padding-top: 32px
+        margin-bottom: 7px
+    &__line
+        width: 90px
+        margin-bottom: 40px
+    &__circle-1
+        position: absolute
+        top: 365px
+        left: 120px
+        animation-name: opac
+        animation-duration: 4s
+    &__circle-2
+        position: absolute
+        top: 80px
+        right: 100px
+        animation-name: opac
+        animation-duration: 4s
+    &__cards
+        margin-bottom: 65px
+
+.card
+    display: flex
+    min-width: 360px
+    height: 360px
+    margin-right: 30px
+    border-radius: 10px
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    z-index: 1
+    &:last-child
+        margin-right: 0px
+
+.cards
+    display: flex
+    min-width: 1140px
+    height: 360px   
+    &__img
+        padding-top: 36px
+        margin-right: 40px
+    &__header
+        text-align: center
+        font-size: 36px
+        font-weight: 600
+        writing-mode: vertical-rl
+        text-orientation: mixed
+        align-self: center
+        line-height: 44px
+    &__card-1
+        background: #E2E2E2
+        animation-name: lowToUp
+        animation-duration: 2s
+    &__card-2
+        background: #F28B64
+        animation-name: lowToUp
+        animation-duration: 2.5s
+    &__card-3
+        background: #5290EA
+        animation-name: lowToUp
+        animation-duration: 3s
+
+.box
+    display: flex
+    justify-content: space-between
+    width: 239px
+    height: 92px
+    &__mini-container-1
+        display: flex
+        flex-direction: column
+        min-width: 139px
+        height: 92px
+    &__mini-container-2
+        display: flex
+        flex-direction: column
+        min-width: 139px
+        height: 92px
+    &__mini-container-3
+        display: flex
+        flex-direction: column
+        min-width: 139px
+        height: 92px
+    &__mini-container-4
+        display: flex
+        flex-direction: column
+        min-width: 139px
+        height: 92px
+
+.header-1
+    font-size: 48px
+    font-weight: 600
+    font-family:'Montserrat', sans-serif
+    display: flex
+    align-self: flex-start
+
+.header-2
+    font-size: 18px
+    font-weight: 400
+    font-family:'Montserrat', sans-serif
+
+.mini-box
+    display: fleximg
+            margin-right: 30px
+
+
+.icons-box
+    display: flex
+    width: 1140px
+    height: 99px
+    &__container-1
+        width: 239px
+        height: 98px
+        margin-right:60px
+        animation-name: opac
+        animation-duration: 5s
+    &__container-2
+        width: 196px
+        height: 98px
+        margin-right:100px
+        animation-name: opac
+        animation-duration: 5s
+    &__container-3
+        width: 197px
+        height: 98px
+        margin-right:110px
+        animation-name: opac
+        animation-duration: 5s
+    &__container-4
+        width: 239px
+        height: 98px
+        animation-name: opac
+        animation-duration: 5s
+
+.box
+    img
+        margin-right: 20px
+
+
+.section-three
+    position: relative
+    background: #F0F0F0
+    overflow: hidden
+    &__container
+        height: 640px
+        display: flex
+        justify-content: space-around
+        align-items: center
+    &__circle
+        transform: rotate(-48.2deg)
+        position: absolute
+        top: -70px
+        right: -60px
+
+.left-wraping
+    width: 542px
+    height: 319px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    &__container
+        z-index: 10
+        width: 387px
+        height: 65px
+    &__header
+        z-index: 10
+    &__ellipse
+        position: absolute
+        left: 1px 
+        top: 88px
+    &__circle
+        position: absolute
+        left: 157px
+        top: 50px
+    &__line
+        width: 60px
+
+.right-wraping
+    width: 470px
+    height: 548px
+    &__header
+        margin-bottom: 20px
+    &__line
+        width: 80px
+    &__page-1
+        font-size: 18px
+        font-weight: 400
+        margin-bottom: 20px
+    &__page-2
+        font-size: 18px
+        font-weight: 400
+        margin-bottom: 30px
+
+.footer
+    background: #FFFFFF
+    width: 1440px
+    height: 273px
+    &__container
+        display: flex
+        min-width: 1291px
+        height: 273px
+    &__img
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+        margin-right: 97px
+    &__box
+        padding-top: 39px
+        width: 557px
+    &__header
+        line-height: 70px
+        margin-bottom: 21px
+    &__line
+        width: 85px
+    &__icons_container
+        img
+            margin: 0
+            margin-right: 17px
+        
+
+
+/* анимации */
+
+@keyframes upToBot
+    0%
+        transform: translateY(-1000px)
+
+    100%
+        transform: translateY(0px)
+
+@keyframes lowToUp
+    0%
+        transform: translateY(1000px)
+
+    100%
+        transform: translateY(0px)
+
+@keyframes opac
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes right
+    0%
+        transform: translateX(-1000px)
+    100%
+        transform: translateX(0px)
