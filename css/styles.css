@@ -139,10 +139,8 @@
   position: absolute;
   right: -10px;
   top: 100px;
-  -webkit-animation-name: upToBot;
-          animation-name: upToBot;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-name: upToBot;
+  animation-duration: 2s;
 }
 .right-wrap__circle:hover {
   background: linear-gradient(143.92deg, rgba(72, 138, 234, 0.5) 14.85%, rgba(237, 123, 80, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%);
@@ -187,10 +185,11 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 .buttons__to-book:hover {
   cursor: pointer;
-  box-shadow: 0 0.5em 0.5em -0.4em red;
+  box-shadow: 0 0.5em 0.5em -0.4em #F28B64;
   transform: translateY(-0.25em);
 }
 .buttons__to-book:active {
@@ -218,6 +217,10 @@
   height: 194px;
   background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%);
   border-radius: 150px;
+  transition: transform 1.4s;
+}
+.circle:hover {
+  transform: rotate(360deg);
 }
 .circle_big {
   width: 282px;
@@ -228,6 +231,10 @@
   height: 129px;
   background: #F0F0F0;
   border-radius: 150px;
+  transition: transform 1s;
+}
+.circle__wrapper-in:hover {
+  transform: rotate(360deg);
 }
 .circle__wrapper-in_big {
   width: 188px;
@@ -254,19 +261,15 @@
   position: absolute;
   top: 365px;
   left: 120px;
-  -webkit-animation-name: opac;
-          animation-name: opac;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  animation-name: opac;
+  animation-duration: 4s;
 }
 .section-two__circle-2 {
   position: absolute;
   top: 80px;
   right: 100px;
-  -webkit-animation-name: opac;
-          animation-name: opac;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  animation-name: opac;
+  animation-duration: 4s;
 }
 .section-two__cards {
   margin-bottom: 65px;
@@ -280,9 +283,13 @@
   border-radius: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   z-index: 1;
+  transition: transform 0.5s;
 }
 .card:last-child {
   margin-right: 0px;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 .cards {
@@ -298,32 +305,25 @@
   text-align: center;
   font-size: 36px;
   font-weight: 600;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   text-orientation: mixed;
   align-self: center;
   line-height: 44px;
 }
 .cards__card-1 {
   background: #E2E2E2;
-  -webkit-animation-name: lowToUp;
-          animation-name: lowToUp;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-name: lowToUp;
+  animation-duration: 2s;
 }
 .cards__card-2 {
   background: #F28B64;
-  -webkit-animation-name: lowToUp;
-          animation-name: lowToUp;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  animation-name: lowToUp;
+  animation-duration: 2.5s;
 }
 .cards__card-3 {
   background: #5290EA;
-  -webkit-animation-name: lowToUp;
-          animation-name: lowToUp;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-name: lowToUp;
+  animation-duration: 3s;
 }
 
 .box {
@@ -331,6 +331,10 @@
   justify-content: space-between;
   width: 239px;
   height: 92px;
+  transition: transform 1s;
+}
+.box:hover {
+  transform: scale(1.05);
 }
 .box__mini-container-1 {
   display: flex;
@@ -385,36 +389,28 @@
   width: 239px;
   height: 98px;
   margin-right: 60px;
-  -webkit-animation-name: opac;
-          animation-name: opac;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  animation-name: opac;
+  animation-duration: 5s;
 }
 .icons-box__container-2 {
   width: 196px;
   height: 98px;
   margin-right: 100px;
-  -webkit-animation-name: opac;
-          animation-name: opac;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  animation-name: opac;
+  animation-duration: 5s;
 }
 .icons-box__container-3 {
   width: 197px;
   height: 98px;
   margin-right: 110px;
-  -webkit-animation-name: opac;
-          animation-name: opac;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  animation-name: opac;
+  animation-duration: 5s;
 }
 .icons-box__container-4 {
   width: 239px;
   height: 98px;
-  -webkit-animation-name: opac;
-          animation-name: opac;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  animation-name: opac;
+  animation-duration: 5s;
 }
 
 .box img {
@@ -521,25 +517,9 @@
 }
 
 /* анимации */
-@-webkit-keyframes upToBot {
-  0% {
-    transform: translateY(-1000px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 @keyframes upToBot {
   0% {
     transform: translateY(-1000px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes lowToUp {
-  0% {
-    transform: translateY(1000px);
   }
   100% {
     transform: translateY(0px);
@@ -553,14 +533,6 @@
     transform: translateY(0px);
   }
 }
-@-webkit-keyframes opac {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes opac {
   0% {
     opacity: 0;
@@ -569,7 +541,7 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes right {
+@keyframes right {
   0% {
     transform: translateX(-1000px);
   }
@@ -577,11 +549,17 @@
     transform: translateX(0px);
   }
 }
-@keyframes right {
+@keyframes rotate180 {
   0% {
-    transform: translateX(-1000px);
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(90deg);
   }
   100% {
-    transform: translateX(0px);
+    transform: rotate(90deg);
   }
 }/*# sourceMappingURL=styles.css.map */
